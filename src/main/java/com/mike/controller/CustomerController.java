@@ -24,7 +24,11 @@ public class CustomerController {
     }
 
     @PostMapping
-    public void addCustomer(@RequestBody Customer customer){
+    public void addCustomer(@RequestBody NewCustomerRequest request){
+        Customer customer = new Customer();
+        customer.setName(request.name());
+        customer.setEmail(request.email());
+        customer.setAge(request.age());
         customerRepository.save(customer);
     }
 }

@@ -22,3 +22,10 @@ public class MikeController {
 }
 record Person(String name, int age, double savings){}
 record GreetResponse(String greet, List<String> favProgrammingLanguages, Person person){}
+
+record NewCustomerRequest (
+        String name,
+        String email,
+        Integer age
+){}
+
