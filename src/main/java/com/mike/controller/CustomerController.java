@@ -31,4 +31,9 @@ public class CustomerController {
         customer.setAge(request.age());
         customerRepository.save(customer);
     }
+
+    @DeleteMapping("{id}")
+    public void deleteCustomer(@PathVariable Integer id){
+        customerRepository.deleteById(id);
+    }
 }
